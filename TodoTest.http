@@ -1,0 +1,16 @@
+POST http://127.0.0.1:8080/todo
+Content-Type: application/json
+
+{
+  "id": "100",
+  "title": "Change filters"
+}
+
+###
+GET http://127.0.0.1:8080/todo
+
+###
+GET http://127.0.0.1:8080/todo/100
+
+###
+DELETE http://127.0.0.1:8080/todo/100
