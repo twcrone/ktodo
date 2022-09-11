@@ -31,7 +31,7 @@ fun Route.todoRouting() {
         post {
             val todo = call.receive<Todo>()
             todoStorage.add(todo)
-            call.respondText("Customer stored", status = HttpStatusCode.Created)
+            call.respondText("Todo stored", status = HttpStatusCode.Created)
         }
         delete("{id?}") {
             val id = call.parameters["id"] ?: return@delete call.respond(HttpStatusCode.BadRequest)
